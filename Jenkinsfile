@@ -1,7 +1,8 @@
 pipeline {
   agent any 
-	properties([parameters([string(defaultValue: 'staging', description: 'deploy to staging', name: 'qa', trim: false)])])
-	
+	parameters{
+	  string(defaultValue: 'staging', description: 'deploy to staging', name: 'qa')
+	}
 	triggers {
 	   pollSCM('* * * * *')
 	}
