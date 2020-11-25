@@ -17,10 +17,11 @@ pipeline {
                                   archiveArtifacts artifacts: '**/target/*.war'
                                 }
                         }
-                }
+        }
 		stage('Deploy') {
 		   steps {
 		      echo "Deploy to staging"
-        }
+			}
+		}
 	}
 }
